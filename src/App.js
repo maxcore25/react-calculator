@@ -1,6 +1,14 @@
+import { useReducer } from 'react';
 import './App.css';
 
+function reducer(state, action) {}
+
 function App() {
+  const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
+    reducer,
+    {}
+  );
+
   return (
     <div className='calculator-grid'>
       <div className='output'>
